@@ -1,0 +1,356 @@
+asp:TextBox
+{
+    width:180px;
+}
+.hiddenButton
+{
+	visibility: hidden;
+}
+.CopyRight
+{
+	position: absolute;
+	left: 5px;
+	top: 750px;
+}
+.LabelHead
+{
+	font-size: 12px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#404040;
+}
+.LabelHeadLine
+{
+	font-size: 12px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#114477;
+	text-decoration:underline;
+}
+.LabelHeadGreen
+{
+	font-size: 12px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#208a9e;
+}
+.LabelHeadBlue
+{
+	font-size: 12px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#346cbf;
+}
+.Login
+{
+	position: absolute;
+	left: 300px;
+	top: 250px;
+}
+.Header1
+{
+	 width:990px;
+	 height:100px;
+	 position: absolute;
+	 left: 5px; 
+	 top: 1px;
+	 
+}
+.Header2
+{
+	width:990px; 
+	position: absolute;
+	left:5px;
+	top: 100px;
+	height:26px;
+}
+.Version
+{
+	 position: absolute;
+	 left: 15px; 
+	 top: 355px;
+}
+.VersionLable
+{
+	font-size: x-small;
+	font-family: Tahoma;
+	color:Gray;
+	text-align: center;
+}
+.Content
+{
+	position: absolute;
+	left: 235px;
+	top: 130px;
+	z-index: -2;
+	width:760px;
+	height:650px;
+}
+.tbListMain
+{
+	width:200px;
+	position:absolute;
+	top:132px;
+	left:795px;
+}
+.tableList
+{
+	width:200px;
+	position:absolute;
+	top:132px;
+	left:604px;
+}
+.DropDownList
+{
+	height:33px;
+	background-image:url(../images/menu1.gif);
+	text-align:center;
+	width:200px;
+}
+.Panel
+{
+	font: bold 8pt Tahoma;
+	color: #606060;
+	text-align: left;
+	padding: 2px;
+	padding-left: 12px;
+	height: 21px;
+	text-decoration: none;
+}
+.PanelSearch {
+	background-color:white;
+	border:1px solid #DADBDB;
+	border-top:yes;
+	width: 790px;
+	VERTICAL-ALIGN: top;
+}
+.PanelDataGrid {
+	background-color:white;
+	border:1px solid #DADBDB;
+	border-top:yes;
+	width: auto;
+	VERTICAL-ALIGN: top;
+}
+.url
+{
+	text-decoration: none;
+	font: 9pt Arial;
+	color:Black;
+}
+.PanelBorder
+{
+	background-color: white;
+	border: 1px solid #DADBDB;
+	border-top: yes;
+	border-bottom:yes;
+	overflow: hidden;
+	position: absolute;
+	left:170px;
+	top: 140px;
+	z-index: -2;
+	width:823px;
+	height:830px;
+}
+.Button
+{
+	width: 60px;
+}
+.Label
+{
+	font-size: 12px;
+	font-family: Arial;
+}
+.DataGrid
+{
+	font-size: 12px;
+	font-family: Arial;
+}
+.BigLabel
+{
+	font-size: 14px;
+	font-family: Arial;
+	font-weight:bold;
+	color:#114477;
+}
+.PageLabel
+{
+	font-size: 11px;
+	font-family: Arial;
+	font-weight:bold;
+}
+.cssPass
+{
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: #D0FAD7;
+}
+.cssFail
+{
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: #FEBDC9;
+}
+
+.cssSelect
+{
+	font-size: 12px;
+	font-family: Arial;
+	background-color: #FDE9BD;
+}
+.ImgBorder
+{
+	border:solid 1 #404040;
+}
+.displayTextbox                   
+{                                 
+	BORDER-RIGHT: white 1px solid;  
+	BORDER-TOP: white 1px solid;    
+	BORDER-LEFT: white 1px solid;   
+	BORDER-BOTTOM: white 1px solid; 
+	background-color:White;         
+	font-size: 12px;                
+	font-family: Arial;             
+	height:16px;                    
+}                                 
+ .Img                  
+ {                     
+ 	border-width:1px;   
+ 	border-style:solid; 
+}
+div#tipDiv {
+  position:absolute; visibility:hidden; left:0; top:0; z-index:10000;
+  background-color:#ffffff; border:1px solid #336; 
+  width:205px; padding:0px;
+  color:#000; font-size:11px; line-height:1.2;
+}
+.HeaderMainTitle
+{
+	font: bold 9pt Arial;
+	color: #ffffff;
+	text-align: left;
+	padding: 2px;
+	padding-left: 12px;
+	height:15px;
+	text-decoration: none;
+	vertical-align:middle;	
+}
+.PanelTitle
+{
+	vertical-align:middle;
+	background-image: url(../images/bg.gif);
+	height:33px;	
+}
+
+.about
+{
+    border:1px solid #a5b2bd; 
+    margin:10px 0; 
+    position:absolute; 
+    width:232px;
+    left: 5px;
+	top: 130px;
+}
+.aboutBox{position:absolute;top:287px; left:499px; width:249px; z-index:3;}
+
+#aboutMain{position:absolute;top:143px; left:5px;z-index:4;}
+#setup
+{position:absolute;top:22px; background-image: url(../images/aboutContent.jpg);
+    background-repeat:no-repeat;width:250px; height:211px;padding:22px 20px 5px 10px;} 
+#portalRightNav{position:absolute;top:143px; left:10px; width:249px; z-index:3;}
+
+#loginMain
+{
+    position: absolute;
+	left: 5px;
+	top: 143px;
+	z-index:4;
+}
+#portalCenterLogin
+{
+    position:absolute;top:200px; left:400px; width:249px; z-index:3;
+}
+#portalRightNavLogin{position:absolute;top:145px; left:10px; width:249px; z-index:3;}
+#setupLogin
+{position:absolute;top:22px; background-image: url(../images/contentbg_login.gif);
+    background-repeat:no-repeat;width:250px; height:173px;padding:22px 20px 5px 10px;} 
+    
+#portalRightNavContent{position:absolute;top:143px; left:274px; width:450px; z-index:3;}
+
+#setupContent
+{position:absolute; 
+    background-repeat:no-repeat;
+    width:682px; 
+    height:690px;
+    padding:22px 20px 5px 10px;
+    top:168px;left:283px;
+    background-image: url(../images/mainContent3.gif);
+}
+
+#setupDefaultContent
+{position:absolute; 
+    background-repeat:no-repeat;
+    width:682px; 
+    height:690px;
+    padding:22px 20px 5px 10px;
+    top:168px;left:283px;
+    background-image: url(../images/mainContent1.gif);    
+ } 
+.tab
+{
+    border:1px solid #DADBDB;
+    background-color:#eeeeee;
+    padding:2px 5px;              
+    font-size: 12px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#208a9e;      	        	             
+}
+
+.tabs
+{
+    position:relative;
+    top:1px;
+    left:5px;
+}
+
+.selectedTab
+{
+    background-color: white;
+    border-bottom:solid 1px white;
+    color:blue; 
+}
+.TabContent
+{
+	background-color: white;
+	border: 1px solid #DADBDB;
+	border-top: none;	        
+	overflow: hidden;	
+	z-index: -2;
+	width:630px;
+	height:550px;	
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+.ErrLabel
+{
+	font-size: 12px;
+	font-family: Arial;
+	color:Red;
+	font-weight:bold;
+}
+.NormalLabel
+{
+	font-size: 12px;
+	font-family: Arial;
+	color:Black;
+	font-weight:bold;
+}
+
+
+
+ 
+
+

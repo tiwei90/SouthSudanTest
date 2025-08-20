@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+  <DataSource>
+    <ConnectionString value="Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;pwd=admin@123;Initial Catalog=VIS;Data Source=127.0.0.1;"/>
+  </DataSource>
+  <WebConfig>
+    <SCHEMAPATH value="SchemaFiles\"/>
+    <HANDLERSPATH value="handler\"/>
+    <DATAPATH value="datapath\"/>
+    <TEMPPATH value="temp\"/>
+    <LOGPATH value="logs/"/>
+    <XMLPATH value="Traces/"/>
+  </WebConfig>
+  <MessageHandlers>
+    <Type name="16.30.1" module="AccessManagement.ObjectHandler.Group" function="InsertGroup"/>
+    <Type name="16.30.2" module="AccessManagement.ObjectHandler.Group" function="SelectGroup"/>
+    <Type name="16.30.3" module="AccessManagement.ObjectHandler.Group" function="UpdateGroup"/>
+    <Type name="16.30.7" module="AccessManagement.ObjectHandler.Group" function="SelectAllGroup"/>
+    <Type name="16.31.1" module="AccessManagement.ObjectHandler.Group" function="InsertGroupPermission"/>
+    <Type name="16.31.2" module="AccessManagement.ObjectHandler.Group" function="SelectGroupPermission"/>
+    <Type name="16.31.4" module="AccessManagement.ObjectHandler.Group" function="DeleteGroupPermission"/>
+    <Type name="16.31.7" module="AccessManagement.ObjectHandler.Group" function="SelectAllGroupPermission"/>
+    <Type name="16.32.1" module="AccessManagement.ObjectHandler.Group" function="InsertGroupUser"/>
+    <Type name="16.32.2" module="AccessManagement.ObjectHandler.Group" function="SelectGroupUser"/>
+    <Type name="16.32.4" module="AccessManagement.ObjectHandler.Group" function="DeleteGroupUser"/>
+    <Type name="16.32.7" module="AccessManagement.ObjectHandler.Group" function="SelectAllGroupUser"/>
+    <Type name="16.56.2" module="AccessManagement.ObjectHandler.Group" function="SelectPermission"/>
+    <Type name="16.56.4" module="AccessManagement.ObjectHandler.Group" function="CheckSinglePermission"/>
+    <Type name="16.56.5" module="AccessManagement.ObjectHandler.Group" function="CheckAllPermission"/>
+    <Type name="16.56.7" module="AccessManagement.ObjectHandler.Group" function="SelectAllPermission"/>
+    <Type name="16.63.1" module="AccessManagement.ObjectHandler.User" function="InsertUser"/>
+    <Type name="16.63.3" module="AccessManagement.ObjectHandler.User" function="UpdateUser"/>
+    <Type name="16.63.8" module="AccessManagement.ObjectHandler.User" function="UpdateSessionKey"/>
+    <Type name="16.63.5" module="AccessManagement.ObjectHandler.User" function="EndOtherSession"/>
+    <Type name="16.63.6" module="AccessManagement.ObjectHandler.User" function="UpdateEndMySession"/>
+  </MessageHandlers>
+</Settings>

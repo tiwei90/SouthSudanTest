@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="DALMService.asmx.cs" Class="DocumentAndLookupManagement.DALMService" %>

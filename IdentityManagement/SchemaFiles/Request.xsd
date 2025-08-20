@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by bpteh (-) -->
+<xs:schema xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified">
+	<xs:element name="VISWEBREQUEST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PERMISSIONCODE">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="16"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ACTIONDESCRIPTION">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="128"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TRANSACTIONDATETIME">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="17"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TRANSACTIONDATA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PAYLOAD">
+								<xs:complexType>
+									<xs:sequence/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

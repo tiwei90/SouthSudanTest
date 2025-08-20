@@ -1,0 +1,2798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://acme.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://acme.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://acme.com/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="BCMSVisaCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeBCMSCheck" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeBCMSCheck">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BCMSVisaCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BCMSVisaCheckResult" type="tns:ResponseDataTypeBCMSCheck" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeBCMSCheck">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="1" maxOccurs="1" name="RecCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApplicationID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetApplicationID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetApplicationID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApplicationIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationIDResult" type="tns:ResponseDataTypeGetApplicationID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetApplicationID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailsResult" type="tns:ResponseDataTypeGetDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocExpiryDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocIssueDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnrolTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataEntryBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataEntryTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataEntryLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CollectionDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportPOI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassportDOE" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassportDOI" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalIDNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImage" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImageJ2K" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceEntryTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PresentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneHome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerOccupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerYearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMaidenName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpouseDOB" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HasChildInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithSpouseInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithDependantInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherVisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LengthOfStay" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripSponsorBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripMoney" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CriminalConvictionInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate1" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate3" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate4" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate5" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitedBhsInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastVisitDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppliedVisaDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaOutCome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeportedInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocIssPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactRelationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedDocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedEntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_DocNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetailsByPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetDetailsByPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetDetailsByPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermissionLevel" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetailsByPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailsByPermissionResult" type="tns:ResponseDataTypeGetDetailsByPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetDetailsByPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocExpiryDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocIssueDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnrolTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataEntryBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataEntryTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataEntryLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CollectionDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportPOI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassportDOE" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassportDOI" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalIDNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImage" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImageJ2K" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceEntryTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PresentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneHome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerOccupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerYearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMaidenName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpouseDOB" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HasChildInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithSpouseInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithDependantInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherVisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LengthOfStay" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripSponsorBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripMoney" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CriminalConvictionInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate1" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate3" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate4" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate5" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitedBhsInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastVisitDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppliedVisaDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaOutCome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeportedInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocIssPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactRelationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedDocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedEntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_DocNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermissionResult" type="tns:ResponseDataTypeGetPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCountryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectCountry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectCountry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortBy" type="s1:char" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCountryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryListResult" type="tns:ResponseDataTypeSelectCountry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectCountry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPlaceList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetPlace">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPlaceListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPlaceListResult" type="tns:ResponseDataTypeGetPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetPlace">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBranchName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetBranchName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetBranchName">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBranchNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBranchNameResult" type="tns:ResponseDataTypeGetBranchName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetBranchName">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessDays" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateStageCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeUpdateStageCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeUpdateStageCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateStageCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateStageCodeResult" type="tns:ResponseDataTypeUpdateStageCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeUpdateStageCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetActiveDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeGetActiveDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeGetActiveDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetActiveDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveDocResult" type="tns:ResponseDataTypeGetActiveDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeGetActiveDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="1" maxOccurs="1" name="RecCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByBranch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByBranchResult" type="tns:ResponseDataTypeQueryByBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByBranch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByBranchWithPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByBranchWithPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByBranchWithPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermissionLevel" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByBranchWithPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByBranchWithPermissionResult" type="tns:ResponseDataTypeQueryByBranchWithPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByBranchWithPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByName">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthCountry" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByNameResult" type="tns:ResponseDataTypeQueryByName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByName">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByNameWithPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByNameWithPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByNameWithPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthCountry" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermissionLevel" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByNameWithPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByNameWithPermissionResult" type="tns:ResponseDataTypeQueryByNameWithPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByNameWithPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByIDPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByIDPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByIDPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByIDPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByIDPersonResult" type="tns:ResponseDataTypeQueryByIDPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByIDPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocExpiryDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocIssueDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnrolTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CollectionDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportPOI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassportDOE" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalIDNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImage" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceImageJ2K" nillable="true" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceEntryTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PresentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneHome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerOccupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerYearsEmployed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseLastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpouseDOB" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HasChildInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithSpouseInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelWithDependantInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherVisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LengthOfStay" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripSponsorBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripMoney" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CriminalConvictionInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate1" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate3" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate4" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OffenceDate5" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenInBHSInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitedBhsInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastVisitDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaInd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppliedVisaDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaOutCome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeportedInd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocIssPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactRelationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByPassport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeQueryByPassport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeQueryByPassport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryByPassportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByPassportResult" type="tns:ResponseDataTypeQueryByPassport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeQueryByPassport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Approve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeApproval" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeApproval">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovalLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Annotation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidWeek" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidMonth" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidYear" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisaClass1" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisaClass2" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisaClass3" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisaClass4" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisaClass5" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InterviewNote" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ApproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApproveResult" type="tns:ResponseDataTypeApproval" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeApproval">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApprovalHistoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectApprovalHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectApprovalHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApprovalHistoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectApprovalHistoryListResult" type="tns:ResponseDataTypeSelectApprovalHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectApprovalHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApproval01List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestdataTypeSelectApproval01List" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestdataTypeSelectApproval01List">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApproval01ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectApproval01ListResult" type="tns:ResponseDataTypeSelectApproval01List" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectApproval01List">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApproval02List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestdataTypeSelectApproval02List" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestdataTypeSelectApproval02List">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectApproval02ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectApproval02ListResult" type="tns:ResponseDataTypeSelectApproval02List" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectApproval02List">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PartialEnrol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypePartialEnrol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypePartialEnrol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppReason" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthCountry" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nationality" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthCtry" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportDOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportPOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportDOE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalIDNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CollectionDate" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PartialEnrolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartialEnrolResult" type="tns:ResponseDataTypePartialEnrol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypePartialEnrol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateProfileEnrol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypePartialEnrol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfileEnrolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateProfileEnrolResult" type="tns:ResponseDataTypePartialEnrol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectReprintColSlipList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectReprintColSlip" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectReprintColSlip">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectReprintColSlipListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectReprintColSlipListResult" type="tns:ResponseDataTypeSelectReprintColSlip" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectReprintColSlip">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompleteEnrol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeDataEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeDataEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppReason" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolCompletedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthCountry" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nationality" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportDOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportPOI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportDOE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaritalStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalIDNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaceImage" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaceImageJ2K" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="PresentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneHome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneWork" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployerPhone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="YearsEmployed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerOccupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormerEmployerPhone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FormerYearsEmployed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherNationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseMaidenName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseDOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasChildInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependantName5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TravelWithSpouseInd" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TravelWithDependantInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherVisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LengthOfStay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HotelPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripSponsorBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TripMoney" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CriminalConvictionInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffenceDate1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffenceDate2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffenceDate3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffenceDate4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Offence5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffenceDate5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePlace5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffencePenalty5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TerrorismInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerrorismDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FatherInBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FatherResidentialStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MotherInBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MotherResidentialStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpouseInBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpouseResidentialStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SiblingInBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiblingResidentialStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChildrenInBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildrenResidentialStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisitedBhsInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastVisitDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppliedVisaInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliedVisaPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaOutcome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeportedInd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactRelationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EGContactPhone" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompleteEnrolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompleteEnrolResult" type="tns:ResponseDataTypeDataEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeDataEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateProfileDataEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeDataEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfileDataEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateProfileDataEntryResult" type="tns:ResponseDataTypeDataEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDataEntryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectDataEntryList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectDataEntryList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectDataEntryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDataEntryListResult" type="tns:ResponseDataTypeSelectDataEntryList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectDataEntryList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeUpdatePayment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeUpdatePayment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentMethod" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentAmt" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentRemark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherPaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AmountChangedBy" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePaymentResult" type="tns:ResponseDataTypeUpdatePayment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeUpdatePayment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultStageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPaymentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectPaymentHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectPaymentHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPaymentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPaymentHistoryResult" type="tns:ResponseDataTypeSelectPaymentHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectPaymentHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Issue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIssuance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIssuance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCert" type="s1:char" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IssueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IssueResult" type="tns:ResponseDataTypeIssuance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeIssuance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ThirdPartyIssue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeThirdPartyIssuance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeThirdPartyIssuance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_Remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_DocNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ThirdPartyIssueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ThirdPartyIssueResult" type="tns:ResponseDataTypeThirdPartyIssuance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeThirdPartyIssuance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectIssuanceList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestdataTypeSelectIssuanceList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestdataTypeSelectIssuanceList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectIssuanceListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectIssuanceListResult" type="tns:ResponseDataTypeSelectIssuanceList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectIssuanceList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnrolScannedDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeInsertScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeInsertScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScannedImage" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScannedDoc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnrolScannedDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnrolScannedDocResult" type="tns:ResponseDataTypeInsertScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeInsertScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteScannedDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeDeleteScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeDeleteScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImageID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteScannedDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteScannedDocResult" type="tns:ResponseDataTypeDeleteScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeDeleteScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetScannedDocList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImageID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetScannedDocListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScannedDocListResult" type="tns:ResponseDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetScannedDocByImageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScannedDocByImageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScannedDocByImageIDResult" type="tns:ResponseDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeDeleteJob" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeDeleteJob">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPerson" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppReason" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassportCOI" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteJobResult" type="tns:ResponseDataTypeDeleteJob" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeDeleteJob">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BCMSVisaCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:BCMSVisaCheck" />
+  </wsdl:message>
+  <wsdl:message name="BCMSVisaCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:BCMSVisaCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationID" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsByPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailsByPermission" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsByPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailsByPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermission" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectPlaceListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectPlaceList" />
+  </wsdl:message>
+  <wsdl:message name="SelectPlaceListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectPlaceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBranchName" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBranchNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStageCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStageCode" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStageCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveDocSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveDoc" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveDocSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByBranch" />
+  </wsdl:message>
+  <wsdl:message name="QueryByBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByBranchWithPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByBranchWithPermission" />
+  </wsdl:message>
+  <wsdl:message name="QueryByBranchWithPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByBranchWithPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByName" />
+  </wsdl:message>
+  <wsdl:message name="QueryByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByNameWithPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByNameWithPermission" />
+  </wsdl:message>
+  <wsdl:message name="QueryByNameWithPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByNameWithPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByIDPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByIDPerson" />
+  </wsdl:message>
+  <wsdl:message name="QueryByIDPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByIDPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByPassportSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByPassport" />
+  </wsdl:message>
+  <wsdl:message name="QueryByPassportSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByPassportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApproveSoapIn">
+    <wsdl:part name="parameters" element="tns:Approve" />
+  </wsdl:message>
+  <wsdl:message name="ApproveSoapOut">
+    <wsdl:part name="parameters" element="tns:ApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectApprovalHistoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectApprovalHistoryList" />
+  </wsdl:message>
+  <wsdl:message name="SelectApprovalHistoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectApprovalHistoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectApproval01ListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectApproval01List" />
+  </wsdl:message>
+  <wsdl:message name="SelectApproval01ListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectApproval01ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectApproval02ListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectApproval02List" />
+  </wsdl:message>
+  <wsdl:message name="SelectApproval02ListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectApproval02ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="PartialEnrolSoapIn">
+    <wsdl:part name="parameters" element="tns:PartialEnrol" />
+  </wsdl:message>
+  <wsdl:message name="PartialEnrolSoapOut">
+    <wsdl:part name="parameters" element="tns:PartialEnrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileEnrolSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProfileEnrol" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileEnrolSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProfileEnrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectReprintColSlipListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectReprintColSlipList" />
+  </wsdl:message>
+  <wsdl:message name="SelectReprintColSlipListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectReprintColSlipListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompleteEnrolSoapIn">
+    <wsdl:part name="parameters" element="tns:CompleteEnrol" />
+  </wsdl:message>
+  <wsdl:message name="CompleteEnrolSoapOut">
+    <wsdl:part name="parameters" element="tns:CompleteEnrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileDataEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProfileDataEntry" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileDataEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProfileDataEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataEntryListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDataEntryList" />
+  </wsdl:message>
+  <wsdl:message name="SelectDataEntryListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDataEntryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePayment" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectPaymentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:SelectPaymentHistory" />
+  </wsdl:message>
+  <wsdl:message name="SelectPaymentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:SelectPaymentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueSoapIn">
+    <wsdl:part name="parameters" element="tns:Issue" />
+  </wsdl:message>
+  <wsdl:message name="IssueSoapOut">
+    <wsdl:part name="parameters" element="tns:IssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThirdPartyIssueSoapIn">
+    <wsdl:part name="parameters" element="tns:ThirdPartyIssue" />
+  </wsdl:message>
+  <wsdl:message name="ThirdPartyIssueSoapOut">
+    <wsdl:part name="parameters" element="tns:ThirdPartyIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectIssuanceListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectIssuanceList" />
+  </wsdl:message>
+  <wsdl:message name="SelectIssuanceListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectIssuanceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnrolScannedDocSoapIn">
+    <wsdl:part name="parameters" element="tns:EnrolScannedDoc" />
+  </wsdl:message>
+  <wsdl:message name="EnrolScannedDocSoapOut">
+    <wsdl:part name="parameters" element="tns:EnrolScannedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteScannedDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteScannedDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteScannedDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteScannedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScannedDocListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScannedDocList" />
+  </wsdl:message>
+  <wsdl:message name="GetScannedDocListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScannedDocListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScannedDocByImageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScannedDocByImageID" />
+  </wsdl:message>
+  <wsdl:message name="GetScannedDocByImageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScannedDocByImageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJobSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteJob" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJobSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteJobResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EMServiceSoap">
+    <wsdl:operation name="BCMSVisaCheck">
+      <wsdl:input message="tns:BCMSVisaCheckSoapIn" />
+      <wsdl:output message="tns:BCMSVisaCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationID">
+      <wsdl:input message="tns:GetApplicationIDSoapIn" />
+      <wsdl:output message="tns:GetApplicationIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <wsdl:input message="tns:GetDetailsSoapIn" />
+      <wsdl:output message="tns:GetDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailsByPermission">
+      <wsdl:input message="tns:GetDetailsByPermissionSoapIn" />
+      <wsdl:output message="tns:GetDetailsByPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermission">
+      <wsdl:input message="tns:GetPermissionSoapIn" />
+      <wsdl:output message="tns:GetPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:input message="tns:GetCountryListSoapIn" />
+      <wsdl:output message="tns:GetCountryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPlaceList">
+      <wsdl:input message="tns:SelectPlaceListSoapIn" />
+      <wsdl:output message="tns:SelectPlaceListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchName">
+      <wsdl:input message="tns:GetBranchNameSoapIn" />
+      <wsdl:output message="tns:GetBranchNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStageCode">
+      <wsdl:input message="tns:UpdateStageCodeSoapIn" />
+      <wsdl:output message="tns:UpdateStageCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveDoc">
+      <wsdl:input message="tns:GetActiveDocSoapIn" />
+      <wsdl:output message="tns:GetActiveDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranch">
+      <wsdl:input message="tns:QueryByBranchSoapIn" />
+      <wsdl:output message="tns:QueryByBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranchWithPermission">
+      <wsdl:input message="tns:QueryByBranchWithPermissionSoapIn" />
+      <wsdl:output message="tns:QueryByBranchWithPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByName">
+      <wsdl:input message="tns:QueryByNameSoapIn" />
+      <wsdl:output message="tns:QueryByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByNameWithPermission">
+      <wsdl:input message="tns:QueryByNameWithPermissionSoapIn" />
+      <wsdl:output message="tns:QueryByNameWithPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByIDPerson">
+      <wsdl:input message="tns:QueryByIDPersonSoapIn" />
+      <wsdl:output message="tns:QueryByIDPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByPassport">
+      <wsdl:input message="tns:QueryByPassportSoapIn" />
+      <wsdl:output message="tns:QueryByPassportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <wsdl:input message="tns:ApproveSoapIn" />
+      <wsdl:output message="tns:ApproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectApprovalHistoryList">
+      <wsdl:input message="tns:SelectApprovalHistoryListSoapIn" />
+      <wsdl:output message="tns:SelectApprovalHistoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval01List">
+      <wsdl:input message="tns:SelectApproval01ListSoapIn" />
+      <wsdl:output message="tns:SelectApproval01ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval02List">
+      <wsdl:input message="tns:SelectApproval02ListSoapIn" />
+      <wsdl:output message="tns:SelectApproval02ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PartialEnrol">
+      <wsdl:input message="tns:PartialEnrolSoapIn" />
+      <wsdl:output message="tns:PartialEnrolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileEnrol">
+      <wsdl:input message="tns:UpdateProfileEnrolSoapIn" />
+      <wsdl:output message="tns:UpdateProfileEnrolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectReprintColSlipList">
+      <wsdl:input message="tns:SelectReprintColSlipListSoapIn" />
+      <wsdl:output message="tns:SelectReprintColSlipListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteEnrol">
+      <wsdl:input message="tns:CompleteEnrolSoapIn" />
+      <wsdl:output message="tns:CompleteEnrolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileDataEntry">
+      <wsdl:input message="tns:UpdateProfileDataEntrySoapIn" />
+      <wsdl:output message="tns:UpdateProfileDataEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataEntryList">
+      <wsdl:input message="tns:SelectDataEntryListSoapIn" />
+      <wsdl:output message="tns:SelectDataEntryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayment">
+      <wsdl:input message="tns:UpdatePaymentSoapIn" />
+      <wsdl:output message="tns:UpdatePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentHistory">
+      <wsdl:input message="tns:SelectPaymentHistorySoapIn" />
+      <wsdl:output message="tns:SelectPaymentHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Issue">
+      <wsdl:input message="tns:IssueSoapIn" />
+      <wsdl:output message="tns:IssueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThirdPartyIssue">
+      <wsdl:input message="tns:ThirdPartyIssueSoapIn" />
+      <wsdl:output message="tns:ThirdPartyIssueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssuanceList">
+      <wsdl:input message="tns:SelectIssuanceListSoapIn" />
+      <wsdl:output message="tns:SelectIssuanceListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrolScannedDoc">
+      <wsdl:input message="tns:EnrolScannedDocSoapIn" />
+      <wsdl:output message="tns:EnrolScannedDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <wsdl:input message="tns:DeleteScannedDocSoapIn" />
+      <wsdl:output message="tns:DeleteScannedDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocList">
+      <wsdl:input message="tns:GetScannedDocListSoapIn" />
+      <wsdl:output message="tns:GetScannedDocListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocByImageID">
+      <wsdl:input message="tns:GetScannedDocByImageIDSoapIn" />
+      <wsdl:output message="tns:GetScannedDocByImageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <wsdl:input message="tns:DeleteJobSoapIn" />
+      <wsdl:output message="tns:DeleteJobSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EMServiceSoap" type="tns:EMServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BCMSVisaCheck">
+      <soap:operation soapAction="http://acme.com/BCMSVisaCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationID">
+      <soap:operation soapAction="http://acme.com/GetApplicationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <soap:operation soapAction="http://acme.com/GetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailsByPermission">
+      <soap:operation soapAction="http://acme.com/GetDetailsByPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermission">
+      <soap:operation soapAction="http://acme.com/GetPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap:operation soapAction="http://acme.com/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPlaceList">
+      <soap:operation soapAction="http://acme.com/SelectPlaceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchName">
+      <soap:operation soapAction="http://acme.com/GetBranchName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStageCode">
+      <soap:operation soapAction="http://acme.com/UpdateStageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveDoc">
+      <soap:operation soapAction="http://acme.com/GetActiveDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranch">
+      <soap:operation soapAction="http://acme.com/QueryByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranchWithPermission">
+      <soap:operation soapAction="http://acme.com/QueryByBranchWithPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByName">
+      <soap:operation soapAction="http://acme.com/QueryByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByNameWithPermission">
+      <soap:operation soapAction="http://acme.com/QueryByNameWithPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByIDPerson">
+      <soap:operation soapAction="http://acme.com/QueryByIDPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByPassport">
+      <soap:operation soapAction="http://acme.com/QueryByPassport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <soap:operation soapAction="http://acme.com/Approve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApprovalHistoryList">
+      <soap:operation soapAction="http://acme.com/SelectApprovalHistoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval01List">
+      <soap:operation soapAction="http://acme.com/SelectApproval01List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval02List">
+      <soap:operation soapAction="http://acme.com/SelectApproval02List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PartialEnrol">
+      <soap:operation soapAction="http://acme.com/PartialEnrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileEnrol">
+      <soap:operation soapAction="http://acme.com/UpdateProfileEnrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectReprintColSlipList">
+      <soap:operation soapAction="http://acme.com/SelectReprintColSlipList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteEnrol">
+      <soap:operation soapAction="http://acme.com/CompleteEnrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileDataEntry">
+      <soap:operation soapAction="http://acme.com/UpdateProfileDataEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataEntryList">
+      <soap:operation soapAction="http://acme.com/SelectDataEntryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayment">
+      <soap:operation soapAction="http://acme.com/UpdatePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentHistory">
+      <soap:operation soapAction="http://acme.com/SelectPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Issue">
+      <soap:operation soapAction="http://acme.com/Issue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThirdPartyIssue">
+      <soap:operation soapAction="http://acme.com/ThirdPartyIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssuanceList">
+      <soap:operation soapAction="http://acme.com/SelectIssuanceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrolScannedDoc">
+      <soap:operation soapAction="http://acme.com/EnrolScannedDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <soap:operation soapAction="http://acme.com/DeleteScannedDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocList">
+      <soap:operation soapAction="http://acme.com/GetScannedDocList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocByImageID">
+      <soap:operation soapAction="http://acme.com/GetScannedDocByImageID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <soap:operation soapAction="http://acme.com/DeleteJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EMServiceSoap12" type="tns:EMServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BCMSVisaCheck">
+      <soap12:operation soapAction="http://acme.com/BCMSVisaCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationID">
+      <soap12:operation soapAction="http://acme.com/GetApplicationID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <soap12:operation soapAction="http://acme.com/GetDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailsByPermission">
+      <soap12:operation soapAction="http://acme.com/GetDetailsByPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermission">
+      <soap12:operation soapAction="http://acme.com/GetPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap12:operation soapAction="http://acme.com/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPlaceList">
+      <soap12:operation soapAction="http://acme.com/SelectPlaceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchName">
+      <soap12:operation soapAction="http://acme.com/GetBranchName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStageCode">
+      <soap12:operation soapAction="http://acme.com/UpdateStageCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveDoc">
+      <soap12:operation soapAction="http://acme.com/GetActiveDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranch">
+      <soap12:operation soapAction="http://acme.com/QueryByBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByBranchWithPermission">
+      <soap12:operation soapAction="http://acme.com/QueryByBranchWithPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByName">
+      <soap12:operation soapAction="http://acme.com/QueryByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByNameWithPermission">
+      <soap12:operation soapAction="http://acme.com/QueryByNameWithPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByIDPerson">
+      <soap12:operation soapAction="http://acme.com/QueryByIDPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByPassport">
+      <soap12:operation soapAction="http://acme.com/QueryByPassport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <soap12:operation soapAction="http://acme.com/Approve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApprovalHistoryList">
+      <soap12:operation soapAction="http://acme.com/SelectApprovalHistoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval01List">
+      <soap12:operation soapAction="http://acme.com/SelectApproval01List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectApproval02List">
+      <soap12:operation soapAction="http://acme.com/SelectApproval02List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PartialEnrol">
+      <soap12:operation soapAction="http://acme.com/PartialEnrol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileEnrol">
+      <soap12:operation soapAction="http://acme.com/UpdateProfileEnrol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectReprintColSlipList">
+      <soap12:operation soapAction="http://acme.com/SelectReprintColSlipList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteEnrol">
+      <soap12:operation soapAction="http://acme.com/CompleteEnrol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileDataEntry">
+      <soap12:operation soapAction="http://acme.com/UpdateProfileDataEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDataEntryList">
+      <soap12:operation soapAction="http://acme.com/SelectDataEntryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayment">
+      <soap12:operation soapAction="http://acme.com/UpdatePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentHistory">
+      <soap12:operation soapAction="http://acme.com/SelectPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Issue">
+      <soap12:operation soapAction="http://acme.com/Issue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThirdPartyIssue">
+      <soap12:operation soapAction="http://acme.com/ThirdPartyIssue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssuanceList">
+      <soap12:operation soapAction="http://acme.com/SelectIssuanceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrolScannedDoc">
+      <soap12:operation soapAction="http://acme.com/EnrolScannedDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <soap12:operation soapAction="http://acme.com/DeleteScannedDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocList">
+      <soap12:operation soapAction="http://acme.com/GetScannedDocList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScannedDocByImageID">
+      <soap12:operation soapAction="http://acme.com/GetScannedDocByImageID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <soap12:operation soapAction="http://acme.com/DeleteJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EMService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+    <wsdl:port name="EMServiceSoap" binding="tns:EMServiceSoap">
+      <soap:address location="http://localhost/EnrollManagement/EMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EMServiceSoap12" binding="tns:EMServiceSoap12">
+      <soap12:address location="http://localhost/EnrollManagement/EMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

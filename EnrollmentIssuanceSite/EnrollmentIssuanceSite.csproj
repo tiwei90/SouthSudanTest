@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnrollmentIssuanceSite</RootNamespace>
+    <AssemblyName>EnrollmentIssuanceSite</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcceptanceSlip.aspx" />
+    <Content Include="ApplicationPart1.aspx" />
+    <Content Include="ApplicationPart2.aspx" />
+    <Content Include="ApplicationPart3.aspx" />
+    <Content Include="ApplicationPart4.aspx" />
+    <Content Include="ApplicationPart5.aspx" />
+    <Content Include="ApplicationPart6.aspx" />
+    <Content Include="Approval.aspx" />
+    <Content Include="ApprovalHistory.aspx" />
+    <Content Include="BirthdayCalendar.aspx" />
+    <Content Include="CheckDMS.aspx" />
+    <Content Include="CollectionSummary.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DMSProfile.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="images\aboutContent.jpg" />
+    <Content Include="images\aboutContent2.jpg" />
+    <Content Include="images\bar_body.gif" />
+    <Content Include="images\bar_left.gif" />
+    <Content Include="images\bar_right.gif" />
+    <Content Include="images\bg.gif" />
+    <Content Include="images\btnLogin.gif" />
+    <Content Include="images\button.gif" />
+    <Content Include="images\childselected.gif" />
+    <Content Include="images\contentbg_login.gif" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\docPayment_icon.gif" />
+    <Content Include="images\dot.gif" />
+    <Content Include="images\header.gif" />
+    <Content Include="images\icon_clear.gif" />
+    <Content Include="images\icon_enrolnew.gif" />
+    <Content Include="images\icon_query.gif" />
+    <Content Include="images\icon_renew.gif" />
+    <Content Include="images\icon_report.gif" />
+    <Content Include="images\icon_warning.gif" />
+    <Content Include="images\icon_watchlist.gif" />
+    <Content Include="images\link.JPG" />
+    <Content Include="images\logout.gif" />
+    <Content Include="images\mainContent.gif" />
+    <Content Include="images\mainContent1.gif" />
+    <Content Include="images\mainContent2.gif" />
+    <Content Include="images\mainContent3.gif" />
+    <Content Include="images\menu.gif" />
+    <Content Include="images\menu1.gif" />
+    <Content Include="images\ministrylogo.gif" />
+    <Content Include="images\NoImage.JPG" />
+    <Content Include="images\NoImage2.jpg" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\tab1.gif" />
+    <Content Include="images\update.gif" />
+    <Content Include="images\viewImage.gif" />
+    <Content Include="inc\common.js" />
+    <Content Include="inc\CSJSRequestObject.js" />
+    <Content Include="inc\Image-18May2012.js" />
+    <Content Include="inc\Image.js" />
+    <Content Include="inc\main.css" />
+    <Content Include="inc\menuitem.css" />
+    <Content Include="inc\MRZ.js" />
+    <Content Include="inc\Passport.js" />
+    <Content Include="inc\scan.js" />
+    <Content Include="inc\thumb.js" />
+    <Content Include="Issuancedetails.aspx" />
+    <Content Include="Logon.aspx" />
+    <Content Include="ObsoleteDetails.aspx" />
+    <Content Include="ObsoleteVisa.aspx" />
+    <Content Include="PaymentDetails.aspx" />
+    <Content Include="PermissionErrorPage.aspx" />
+    <Content Include="popupCal.aspx" />
+    <Content Include="Query.aspx" />
+    <Content Include="QueryApproval.aspx" />
+    <Content Include="QueryIssuance.aspx" />
+    <Content Include="QueryPayment.aspx" />
+    <Content Include="QueryReprint.aspx" />
+    <Content Include="QueryView.aspx" />
+    <Content Include="ReadVisa.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="UpdateProfile.aspx" />
+    <Content Include="UserControl\header.ascx" />
+    <Content Include="UserControl\header_main.ascx" />
+    <Content Include="UserControl\login.ascx" />
+    <Content Include="UserControl\logon.ascx" />
+    <Content Include="UserControl\logonContent.ascx" />
+    <Content Include="UserControl\sidemenu.ascx" />
+    <Content Include="UserControl\version.ascx" />
+    <Content Include="Version.xml" />
+    <Content Include="VisaPayment.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AccessManagementWS\AMService.disco" />
+    <None Include="Web References\DALMWS\DALMService.disco" />
+    <None Include="Web References\EnrollManagementWS\EMService.wsdl" />
+    <None Include="Web References\EnrollManagementWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeApproval.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeBCMSCheck.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeDataEntry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeDeleteJob.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeDeleteScannedDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetActiveDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetApplicationID.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetBranchName.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetDetailsByPermission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetPermission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeGetPlace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeInsertScannedDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeIssuance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypePartialEnrol.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByBranch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByBranchWithPermission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByIDPerson.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByName.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByNameWithPermission.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeQueryByPassport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectApproval01List.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectApproval02List.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectApprovalHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectCountry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectDataEntryList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectIssuanceList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectPaymentHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectReprintColSlip.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeSelectScannedDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeThirdPartyIssuance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeUpdatePayment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EnrollManagementWS\ResponseDataTypeUpdateStageCode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IdentityManagementWS\IMService.disco" />
+    <None Include="Web References\EnrollManagementWS\EMService.disco" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\AccessManagementWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DALMWS\DALMService.wsdl" />
+    <None Include="Web References\DALMWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeIUD.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectAll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectAppReason.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectBranch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectDocType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectEntryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectFees.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectIssRejectReason.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectLayoutID.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectLocation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectPaymentMethod.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectPoliceStation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectRejectReason.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectResidentialStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectScannedDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectVisaClass.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DALMWS\ResponseDataTypeSelectVisitPurpose.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IdentityManagementWS\IMService.wsdl" />
+    <None Include="Web References\IdentityManagementWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptanceSlip.aspx.cs">
+      <DependentUpon>AcceptanceSlip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcceptanceSlip.aspx.designer.cs">
+      <DependentUpon>AcceptanceSlip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart1.aspx.cs">
+      <DependentUpon>ApplicationPart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart1.aspx.designer.cs">
+      <DependentUpon>ApplicationPart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart2.aspx.cs">
+      <DependentUpon>ApplicationPart2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart2.aspx.designer.cs">
+      <DependentUpon>ApplicationPart2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart3.aspx.cs">
+      <DependentUpon>ApplicationPart3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart3.aspx.designer.cs">
+      <DependentUpon>ApplicationPart3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart4.aspx.cs">
+      <DependentUpon>ApplicationPart4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart4.aspx.designer.cs">
+      <DependentUpon>ApplicationPart4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart5.aspx.cs">
+      <DependentUpon>ApplicationPart5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart5.aspx.designer.cs">
+      <DependentUpon>ApplicationPart5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationPart6.aspx.cs">
+      <DependentUpon>ApplicationPart6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationPart6.aspx.designer.cs">
+      <DependentUpon>ApplicationPart6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Approval.aspx.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Approval.aspx.designer.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalHistory.aspx.cs">
+      <DependentUpon>ApprovalHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalHistory.aspx.designer.cs">
+      <DependentUpon>ApprovalHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BirthdayCalendar.aspx.cs">
+      <DependentUpon>BirthdayCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BirthdayCalendar.aspx.designer.cs">
+      <DependentUpon>BirthdayCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckDMS.aspx.cs">
+      <DependentUpon>CheckDMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckDMS.aspx.designer.cs">
+      <DependentUpon>CheckDMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionSummary.aspx.cs">
+      <DependentUpon>CollectionSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionSummary.aspx.designer.cs">
+      <DependentUpon>CollectionSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMSProfile.aspx.cs">
+      <DependentUpon>DMSProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DMSProfile.aspx.designer.cs">
+      <DependentUpon>DMSProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iden.master.cs">
+      <DependentUpon>iden.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iden.master.designer.cs">
+      <DependentUpon>iden.master</DependentUpon>
+    </Compile>
+    <Compile Include="Issuancedetails.aspx.cs">
+      <DependentUpon>Issuancedetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Issuancedetails.aspx.designer.cs">
+      <DependentUpon>Issuancedetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObsoleteDetails.aspx.cs">
+      <DependentUpon>ObsoleteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObsoleteDetails.aspx.designer.cs">
+      <DependentUpon>ObsoleteDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObsoleteVisa.aspx.cs">
+      <DependentUpon>ObsoleteVisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObsoleteVisa.aspx.designer.cs">
+      <DependentUpon>ObsoleteVisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentDetails.aspx.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentDetails.aspx.designer.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionErrorPage.aspx.cs">
+      <DependentUpon>PermissionErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionErrorPage.aspx.designer.cs">
+      <DependentUpon>PermissionErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="popupCal.aspx.cs">
+      <DependentUpon>popupCal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popupCal.aspx.designer.cs">
+      <DependentUpon>popupCal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Query.aspx.cs">
+      <DependentUpon>Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query.aspx.designer.cs">
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryApproval.aspx.cs">
+      <DependentUpon>QueryApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryApproval.aspx.designer.cs">
+      <DependentUpon>QueryApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryIssuance.aspx.cs">
+      <DependentUpon>QueryIssuance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryIssuance.aspx.designer.cs">
+      <DependentUpon>QueryIssuance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryPayment.aspx.cs">
+      <DependentUpon>QueryPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryPayment.aspx.designer.cs">
+      <DependentUpon>QueryPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryReprint.aspx.cs">
+      <DependentUpon>QueryReprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryReprint.aspx.designer.cs">
+      <DependentUpon>QueryReprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryView.aspx.cs">
+      <DependentUpon>QueryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryView.aspx.designer.cs">
+      <DependentUpon>QueryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadVisa.aspx.cs">
+      <DependentUpon>ReadVisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadVisa.aspx.designer.cs">
+      <DependentUpon>ReadVisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\common.cs" />
+    <Compile Include="UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\header_main.ascx.cs">
+      <DependentUpon>header_main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\header_main.ascx.designer.cs">
+      <DependentUpon>header_main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\login.ascx.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\login.ascx.designer.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\logon.ascx.cs">
+      <DependentUpon>logon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\logon.ascx.designer.cs">
+      <DependentUpon>logon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\logonContent.ascx.cs">
+      <DependentUpon>logonContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\logonContent.ascx.designer.cs">
+      <DependentUpon>logonContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\sidemenu.ascx.cs">
+      <DependentUpon>sidemenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\sidemenu.ascx.designer.cs">
+      <DependentUpon>sidemenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\version.ascx.cs">
+      <DependentUpon>version.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\version.ascx.designer.cs">
+      <DependentUpon>version.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VisaPayment.aspx.cs">
+      <DependentUpon>VisaPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisaPayment.aspx.designer.cs">
+      <DependentUpon>VisaPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AccessManagementWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DALMWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EnrollManagementWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\IdentityManagementWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iden.master" />
+    <Content Include="iden2.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Thumbs.db" />
+    <None Include="Web References\AccessManagementWS\AMService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/AccessManagement/AMService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AccessManagementWS\</RelPath>
+      <UpdateFromURL>http://localhost/AccessManagement/AMService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EnrollmentIssuanceSite_AccessManagementWS_AMService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/DocumentAndLookupManagement/DALMService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DALMWS\</RelPath>
+      <UpdateFromURL>http://localhost/DocumentAndLookupManagement/DALMService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EnrollmentIssuanceSite_DALMWS_DALMService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/EnrollManagement/EMService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EnrollManagementWS\</RelPath>
+      <UpdateFromURL>http://localhost/EnrollManagement/EMService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EnrollmentIssuanceSite_EnrollManagementWS_EMService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/IdentityManagement/IMService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\IdentityManagementWS\</RelPath>
+      <UpdateFromURL>http://localhost/IdentityManagement/IMService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EnrollmentIssuanceSite_IdentityManagementWS_IMService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59682</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/EnrollmentIssuanceSite</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

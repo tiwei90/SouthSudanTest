@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="IMService.asmx.cs" Class="IdentityManagement.IMService" %>

@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="AMService.asmx.cs" Class="AccessManagement.AMService" %>

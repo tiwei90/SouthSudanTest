@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Location>
+	<Location>
+		<Type>Approval</Type>
+	</Location>
+	<Location>
+		<Type>Enrolment</Type>
+	</Location>
+	<Location>
+		<Type>Issuance</Type>
+	</Location>
+	<Location>
+		<Type>Payment</Type>
+	</Location>
+	<Location>
+		<Type>PrintPerso</Type>
+	</Location>
+	<Location>
+		<Type>QC</Type>
+	</Location>
+</Location>

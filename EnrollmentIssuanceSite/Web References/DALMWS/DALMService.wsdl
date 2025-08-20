@@ -1,0 +1,3379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://acme.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://acme.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://acme.com/">
+      <s:element name="SelectAppReasonList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectAppReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectAppReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectAppReasonListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAppReasonListResult" type="tns:ResponseDataTypeSelectAppReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectAppReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertAppReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDAppReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDAppReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppReason" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertAppReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertAppReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeIUD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateAppReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDAppReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAppReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAppReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAppReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDAppReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAppReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteAppReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDocTypeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectDocType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectDocType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectDocTypeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDocTypeListResult" type="tns:ResponseDataTypeSelectDocType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectDocType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertDocType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupDocType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDLookupDocType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LayoutID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertDocTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertDocTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDocType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupDocType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDocTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDocTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupDocType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteDocTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectAll">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectBranchResult" type="tns:ResponseDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectAll">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDBranch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessDays" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertBranchResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateBranchResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteBranchResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPaymentMethodList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectPaymentMethod" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectPaymentMethod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPaymentMethodListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPaymentMethodListResult" type="tns:ResponseDataTypeSelectPaymentMethod" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectPaymentMethod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPaymentMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPaymentMethod" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDPaymentMethod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentMethod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPaymentMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertPaymentMethodResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePaymentMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPaymentMethod" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePaymentMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePaymentMethodResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePaymentMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPaymentMethod" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePaymentMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeletePaymentMethodResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectScannedDocList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectScannedDocListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectScannedDocListResult" type="tns:ResponseDataTypeSelectScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertScannedDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDScannedDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScannedDoc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertScannedDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertScannedDocResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateScannedDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateScannedDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateScannedDocResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteScannedDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDScannedDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteScannedDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteScannedDocResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFeesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectFees">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectFeesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFeesListResult" type="tns:ResponseDataTypeSelectFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectFees">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="Fee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFeeResult" type="tns:ResponseDataTypeSelectFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDLookupFees">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fee" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertFeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertFeesResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateFeesResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLookupFees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFeesResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectRejectReasonResult" type="tns:ResponseDataTypeSelectRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectReasonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLayoutID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectLayoutID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectLayoutID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppReason" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLayoutIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLayoutIDResult" type="tns:ResponseDataTypeSelectLayoutID" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectLayoutID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPoliceStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectPoliceStation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectPoliceStation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectPoliceStationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPoliceStationResult" type="tns:ResponseDataTypeSelectPoliceStation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectPoliceStation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPoliceStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPoliceStation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDPoliceStation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPoliceStationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertPoliceStationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePoliceStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPoliceStation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePoliceStationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePoliceStationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePoliceStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPoliceStation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePoliceStationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeletePoliceStationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectBranchList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectBranch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectBranchListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectBranchListResult" type="tns:ResponseDataTypeSelectBranch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectBranch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectIssRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectIssRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectIssRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectIssRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectIssRejectReasonResult" type="tns:ResponseDataTypeSelectIssRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectIssRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertIssRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDIssRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDIssRejectReason">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertIssRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertIssRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIssRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDIssRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIssRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateIssRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteIssRejectReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDIssRejectReason" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteIssRejectReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteIssRejectReasonResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLocationList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLocationListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLocationListResult" type="tns:ResponseDataTypeSelectLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Obsolete" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertLocationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLocationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLookupEntryTypeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectEntryType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectEntryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLookupEntryTypeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLookupEntryTypeListResult" type="tns:ResponseDataTypeSelectEntryType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectEntryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertEntryType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDEntryType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDEntryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertEntryTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertEntryTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEntryType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDEntryType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEntryTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateEntryTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEntryType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDEntryType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEntryTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteEntryTypeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLookupResidentialStatusList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectResidentialStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectResidentialStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLookupResidentialStatusListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLookupResidentialStatusListResult" type="tns:ResponseDataTypeSelectResidentialStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectResidentialStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertResidentialStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDResidentialStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDResidentialStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResidentialStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertResidentialStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertResidentialStatusResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentialStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDResidentialStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentialStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateResidentialStatusResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentialStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDResidentialStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentialStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResidentialStatusResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectVisaClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectVisaClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectVisaClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectVisaClassResult" type="tns:ResponseDataTypeSelectVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectVisaClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLookupVisaClassList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLookupVisaClassListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLookupVisaClassListResult" type="tns:ResponseDataTypeSelectVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertVisaClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDVisaClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Class" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertVisaClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertVisaClassResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisaClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisaClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVisaClassResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVisaClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisaClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVisaClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteVisaClassResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLookupVisitPurposeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectVisitPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectVisitPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectLookupVisitPurposeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLookupVisitPurposeListResult" type="tns:ResponseDataTypeSelectVisitPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDataTypeSelectVisitPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertVisitPurpose">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisitPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDVisitPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitPurpose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertVisitPurposeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertVisitPurposeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisitPurpose">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisitPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisitPurposeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVisitPurposeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVisitPurpose">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDVisitPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVisitPurposeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteVisitPurposeResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectConfigLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectConfigLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeSelectConfigLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectConfigLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectConfigLocationResult" type="tns:ResponseDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllConfigLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectConfigLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllConfigLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllConfigLocationResult" type="tns:ResponseDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertConfigLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDConfigLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDConfigLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnrollment" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPayment" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsApproval" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsIssuance" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherCounter1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherCounter2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherCounter3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherCounter4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherCounter5" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertConfigLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertConfigLocationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateConfigLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDConfigLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateConfigLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateConfigLocationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDConfigLocation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteConfigLocationResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPersoMappingList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPersoMappingListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPersoMappingListResult" type="tns:ResponseDataTypeSelectAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertPersoMapping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPersoMapping" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestDataTypeIUDPersoMapping">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PermissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrolLocationName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersoBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrollBranch" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPersoMappingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertPersoMappingResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePersoMapping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestdatatype" type="tns:RequestDataTypeIUDPersoMapping" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePersoMappingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePersoMappingResult" type="tns:ResponseDataTypeIUD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SelectAppReasonListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAppReasonList" />
+  </wsdl:message>
+  <wsdl:message name="SelectAppReasonListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAppReasonListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAppReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAppReason" />
+  </wsdl:message>
+  <wsdl:message name="InsertAppReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAppReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAppReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAppReason" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAppReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAppReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAppReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAppReason" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAppReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAppReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDocTypeListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectDocTypeList" />
+  </wsdl:message>
+  <wsdl:message name="SelectDocTypeListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectDocTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDocType" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDocTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDocType" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDocTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDocType" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectBranch" />
+  </wsdl:message>
+  <wsdl:message name="SelectBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBranch" />
+  </wsdl:message>
+  <wsdl:message name="InsertBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBranch" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBranch" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectPaymentMethodListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectPaymentMethodList" />
+  </wsdl:message>
+  <wsdl:message name="SelectPaymentMethodListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectPaymentMethodListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertPaymentMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertPaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="InsertPaymentMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertPaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePaymentMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePaymentMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectScannedDocListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectScannedDocList" />
+  </wsdl:message>
+  <wsdl:message name="SelectScannedDocListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectScannedDocListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertScannedDocSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertScannedDoc" />
+  </wsdl:message>
+  <wsdl:message name="InsertScannedDocSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertScannedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateScannedDocSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateScannedDoc" />
+  </wsdl:message>
+  <wsdl:message name="UpdateScannedDocSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateScannedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteScannedDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteScannedDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteScannedDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteScannedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectFeesListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectFeesList" />
+  </wsdl:message>
+  <wsdl:message name="SelectFeesListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectFeesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectFee" />
+  </wsdl:message>
+  <wsdl:message name="SelectFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFeesSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFees" />
+  </wsdl:message>
+  <wsdl:message name="InsertFeesSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFeesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFees" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFeesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFeesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFees" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFeesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="SelectRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="InsertRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLayoutIDSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLayoutID" />
+  </wsdl:message>
+  <wsdl:message name="SelectLayoutIDSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLayoutIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectPoliceStationSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectPoliceStation" />
+  </wsdl:message>
+  <wsdl:message name="SelectPoliceStationSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectPoliceStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertPoliceStationSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertPoliceStation" />
+  </wsdl:message>
+  <wsdl:message name="InsertPoliceStationSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertPoliceStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePoliceStationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePoliceStation" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePoliceStationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePoliceStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePoliceStationSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePoliceStation" />
+  </wsdl:message>
+  <wsdl:message name="DeletePoliceStationSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePoliceStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectBranchListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectBranchList" />
+  </wsdl:message>
+  <wsdl:message name="SelectBranchListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectBranchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectIssRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectIssRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="SelectIssRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectIssRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertIssRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertIssRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="InsertIssRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertIssRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIssRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateIssRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIssRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateIssRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIssRejectReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteIssRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIssRejectReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteIssRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLocationListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLocationList" />
+  </wsdl:message>
+  <wsdl:message name="SelectLocationListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertLocation" />
+  </wsdl:message>
+  <wsdl:message name="InsertLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLocation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupEntryTypeListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLookupEntryTypeList" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupEntryTypeListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLookupEntryTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertEntryTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertEntryType" />
+  </wsdl:message>
+  <wsdl:message name="InsertEntryTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertEntryTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEntryTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEntryType" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEntryTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEntryTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEntryTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEntryType" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEntryTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEntryTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupResidentialStatusListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLookupResidentialStatusList" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupResidentialStatusListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLookupResidentialStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertResidentialStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertResidentialStatus" />
+  </wsdl:message>
+  <wsdl:message name="InsertResidentialStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertResidentialStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentialStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateResidentialStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentialStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResidentialStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentialStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResidentialStatus" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentialStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResidentialStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectVisaClassSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectVisaClass" />
+  </wsdl:message>
+  <wsdl:message name="SelectVisaClassSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectVisaClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupVisaClassListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLookupVisaClassList" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupVisaClassListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLookupVisaClassListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertVisaClassSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertVisaClass" />
+  </wsdl:message>
+  <wsdl:message name="InsertVisaClassSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertVisaClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisaClassSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVisaClass" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisaClassSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVisaClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVisaClassSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVisaClass" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVisaClassSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVisaClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupVisitPurposeListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLookupVisitPurposeList" />
+  </wsdl:message>
+  <wsdl:message name="SelectLookupVisitPurposeListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLookupVisitPurposeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertVisitPurposeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertVisitPurpose" />
+  </wsdl:message>
+  <wsdl:message name="InsertVisitPurposeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertVisitPurposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitPurposeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVisitPurpose" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitPurposeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVisitPurposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVisitPurposeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVisitPurpose" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVisitPurposeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVisitPurposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectConfigLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectConfigLocation" />
+  </wsdl:message>
+  <wsdl:message name="SelectConfigLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectConfigLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllConfigLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAllConfigLocation" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllConfigLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAllConfigLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertConfigLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertConfigLocation" />
+  </wsdl:message>
+  <wsdl:message name="InsertConfigLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertConfigLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateConfigLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateConfigLocation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateConfigLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateConfigLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteConfigLocation" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteConfigLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectPersoMappingListSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectPersoMappingList" />
+  </wsdl:message>
+  <wsdl:message name="SelectPersoMappingListSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectPersoMappingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertPersoMappingSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertPersoMapping" />
+  </wsdl:message>
+  <wsdl:message name="InsertPersoMappingSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertPersoMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersoMappingSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePersoMapping" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersoMappingSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePersoMappingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DALMServiceSoap">
+    <wsdl:operation name="SelectAppReasonList">
+      <wsdl:input message="tns:SelectAppReasonListSoapIn" />
+      <wsdl:output message="tns:SelectAppReasonListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAppReason">
+      <wsdl:input message="tns:InsertAppReasonSoapIn" />
+      <wsdl:output message="tns:InsertAppReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppReason">
+      <wsdl:input message="tns:UpdateAppReasonSoapIn" />
+      <wsdl:output message="tns:UpdateAppReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppReason">
+      <wsdl:input message="tns:DeleteAppReasonSoapIn" />
+      <wsdl:output message="tns:DeleteAppReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocTypeList">
+      <wsdl:input message="tns:SelectDocTypeListSoapIn" />
+      <wsdl:output message="tns:SelectDocTypeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocType">
+      <wsdl:input message="tns:InsertDocTypeSoapIn" />
+      <wsdl:output message="tns:InsertDocTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocType">
+      <wsdl:input message="tns:UpdateDocTypeSoapIn" />
+      <wsdl:output message="tns:UpdateDocTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocType">
+      <wsdl:input message="tns:DeleteDocTypeSoapIn" />
+      <wsdl:output message="tns:DeleteDocTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranch">
+      <wsdl:input message="tns:SelectBranchSoapIn" />
+      <wsdl:output message="tns:SelectBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBranch">
+      <wsdl:input message="tns:InsertBranchSoapIn" />
+      <wsdl:output message="tns:InsertBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <wsdl:input message="tns:UpdateBranchSoapIn" />
+      <wsdl:output message="tns:UpdateBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <wsdl:input message="tns:DeleteBranchSoapIn" />
+      <wsdl:output message="tns:DeleteBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentMethodList">
+      <wsdl:input message="tns:SelectPaymentMethodListSoapIn" />
+      <wsdl:output message="tns:SelectPaymentMethodListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPaymentMethod">
+      <wsdl:input message="tns:InsertPaymentMethodSoapIn" />
+      <wsdl:output message="tns:InsertPaymentMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentMethod">
+      <wsdl:input message="tns:UpdatePaymentMethodSoapIn" />
+      <wsdl:output message="tns:UpdatePaymentMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentMethod">
+      <wsdl:input message="tns:DeletePaymentMethodSoapIn" />
+      <wsdl:output message="tns:DeletePaymentMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectScannedDocList">
+      <wsdl:input message="tns:SelectScannedDocListSoapIn" />
+      <wsdl:output message="tns:SelectScannedDocListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertScannedDoc">
+      <wsdl:input message="tns:InsertScannedDocSoapIn" />
+      <wsdl:output message="tns:InsertScannedDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateScannedDoc">
+      <wsdl:input message="tns:UpdateScannedDocSoapIn" />
+      <wsdl:output message="tns:UpdateScannedDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <wsdl:input message="tns:DeleteScannedDocSoapIn" />
+      <wsdl:output message="tns:DeleteScannedDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFeesList">
+      <wsdl:input message="tns:SelectFeesListSoapIn" />
+      <wsdl:output message="tns:SelectFeesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFee">
+      <wsdl:input message="tns:SelectFeeSoapIn" />
+      <wsdl:output message="tns:SelectFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFees">
+      <wsdl:input message="tns:InsertFeesSoapIn" />
+      <wsdl:output message="tns:InsertFeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFees">
+      <wsdl:input message="tns:UpdateFeesSoapIn" />
+      <wsdl:output message="tns:UpdateFeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFees">
+      <wsdl:input message="tns:DeleteFeesSoapIn" />
+      <wsdl:output message="tns:DeleteFeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRejectReason">
+      <wsdl:input message="tns:SelectRejectReasonSoapIn" />
+      <wsdl:output message="tns:SelectRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRejectReason">
+      <wsdl:input message="tns:InsertRejectReasonSoapIn" />
+      <wsdl:output message="tns:InsertRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectReason">
+      <wsdl:input message="tns:UpdateRejectReasonSoapIn" />
+      <wsdl:output message="tns:UpdateRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRejectReason">
+      <wsdl:input message="tns:DeleteRejectReasonSoapIn" />
+      <wsdl:output message="tns:DeleteRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLayoutID">
+      <wsdl:input message="tns:SelectLayoutIDSoapIn" />
+      <wsdl:output message="tns:SelectLayoutIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPoliceStation">
+      <wsdl:input message="tns:SelectPoliceStationSoapIn" />
+      <wsdl:output message="tns:SelectPoliceStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoliceStation">
+      <wsdl:input message="tns:InsertPoliceStationSoapIn" />
+      <wsdl:output message="tns:InsertPoliceStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoliceStation">
+      <wsdl:input message="tns:UpdatePoliceStationSoapIn" />
+      <wsdl:output message="tns:UpdatePoliceStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoliceStation">
+      <wsdl:input message="tns:DeletePoliceStationSoapIn" />
+      <wsdl:output message="tns:DeletePoliceStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranchList">
+      <wsdl:input message="tns:SelectBranchListSoapIn" />
+      <wsdl:output message="tns:SelectBranchListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssRejectReason">
+      <wsdl:input message="tns:SelectIssRejectReasonSoapIn" />
+      <wsdl:output message="tns:SelectIssRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertIssRejectReason">
+      <wsdl:input message="tns:InsertIssRejectReasonSoapIn" />
+      <wsdl:output message="tns:InsertIssRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssRejectReason">
+      <wsdl:input message="tns:UpdateIssRejectReasonSoapIn" />
+      <wsdl:output message="tns:UpdateIssRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIssRejectReason">
+      <wsdl:input message="tns:DeleteIssRejectReasonSoapIn" />
+      <wsdl:output message="tns:DeleteIssRejectReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLocationList">
+      <wsdl:input message="tns:SelectLocationListSoapIn" />
+      <wsdl:output message="tns:SelectLocationListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLocation">
+      <wsdl:input message="tns:InsertLocationSoapIn" />
+      <wsdl:output message="tns:InsertLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLocation">
+      <wsdl:input message="tns:UpdateLocationSoapIn" />
+      <wsdl:output message="tns:UpdateLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupEntryTypeList">
+      <wsdl:input message="tns:SelectLookupEntryTypeListSoapIn" />
+      <wsdl:output message="tns:SelectLookupEntryTypeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEntryType">
+      <wsdl:input message="tns:InsertEntryTypeSoapIn" />
+      <wsdl:output message="tns:InsertEntryTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntryType">
+      <wsdl:input message="tns:UpdateEntryTypeSoapIn" />
+      <wsdl:output message="tns:UpdateEntryTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntryType">
+      <wsdl:input message="tns:DeleteEntryTypeSoapIn" />
+      <wsdl:output message="tns:DeleteEntryTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupResidentialStatusList">
+      <wsdl:input message="tns:SelectLookupResidentialStatusListSoapIn" />
+      <wsdl:output message="tns:SelectLookupResidentialStatusListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertResidentialStatus">
+      <wsdl:input message="tns:InsertResidentialStatusSoapIn" />
+      <wsdl:output message="tns:InsertResidentialStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentialStatus">
+      <wsdl:input message="tns:UpdateResidentialStatusSoapIn" />
+      <wsdl:output message="tns:UpdateResidentialStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentialStatus">
+      <wsdl:input message="tns:DeleteResidentialStatusSoapIn" />
+      <wsdl:output message="tns:DeleteResidentialStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVisaClass">
+      <wsdl:input message="tns:SelectVisaClassSoapIn" />
+      <wsdl:output message="tns:SelectVisaClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisaClassList">
+      <wsdl:input message="tns:SelectLookupVisaClassListSoapIn" />
+      <wsdl:output message="tns:SelectLookupVisaClassListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisaClass">
+      <wsdl:input message="tns:InsertVisaClassSoapIn" />
+      <wsdl:output message="tns:InsertVisaClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaClass">
+      <wsdl:input message="tns:UpdateVisaClassSoapIn" />
+      <wsdl:output message="tns:UpdateVisaClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisaClass">
+      <wsdl:input message="tns:DeleteVisaClassSoapIn" />
+      <wsdl:output message="tns:DeleteVisaClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisitPurposeList">
+      <wsdl:input message="tns:SelectLookupVisitPurposeListSoapIn" />
+      <wsdl:output message="tns:SelectLookupVisitPurposeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisitPurpose">
+      <wsdl:input message="tns:InsertVisitPurposeSoapIn" />
+      <wsdl:output message="tns:InsertVisitPurposeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitPurpose">
+      <wsdl:input message="tns:UpdateVisitPurposeSoapIn" />
+      <wsdl:output message="tns:UpdateVisitPurposeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisitPurpose">
+      <wsdl:input message="tns:DeleteVisitPurposeSoapIn" />
+      <wsdl:output message="tns:DeleteVisitPurposeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectConfigLocation">
+      <wsdl:input message="tns:SelectConfigLocationSoapIn" />
+      <wsdl:output message="tns:SelectConfigLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllConfigLocation">
+      <wsdl:input message="tns:SelectAllConfigLocationSoapIn" />
+      <wsdl:output message="tns:SelectAllConfigLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertConfigLocation">
+      <wsdl:input message="tns:InsertConfigLocationSoapIn" />
+      <wsdl:output message="tns:InsertConfigLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigLocation">
+      <wsdl:input message="tns:UpdateConfigLocationSoapIn" />
+      <wsdl:output message="tns:UpdateConfigLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigLocation">
+      <wsdl:input message="tns:DeleteConfigLocationSoapIn" />
+      <wsdl:output message="tns:DeleteConfigLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPersoMappingList">
+      <wsdl:input message="tns:SelectPersoMappingListSoapIn" />
+      <wsdl:output message="tns:SelectPersoMappingListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersoMapping">
+      <wsdl:input message="tns:InsertPersoMappingSoapIn" />
+      <wsdl:output message="tns:InsertPersoMappingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersoMapping">
+      <wsdl:input message="tns:UpdatePersoMappingSoapIn" />
+      <wsdl:output message="tns:UpdatePersoMappingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DALMServiceSoap" type="tns:DALMServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAppReasonList">
+      <soap:operation soapAction="http://acme.com/SelectAppReasonList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAppReason">
+      <soap:operation soapAction="http://acme.com/InsertAppReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppReason">
+      <soap:operation soapAction="http://acme.com/UpdateAppReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppReason">
+      <soap:operation soapAction="http://acme.com/DeleteAppReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocTypeList">
+      <soap:operation soapAction="http://acme.com/SelectDocTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocType">
+      <soap:operation soapAction="http://acme.com/InsertDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocType">
+      <soap:operation soapAction="http://acme.com/UpdateDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocType">
+      <soap:operation soapAction="http://acme.com/DeleteDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranch">
+      <soap:operation soapAction="http://acme.com/SelectBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBranch">
+      <soap:operation soapAction="http://acme.com/InsertBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap:operation soapAction="http://acme.com/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <soap:operation soapAction="http://acme.com/DeleteBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentMethodList">
+      <soap:operation soapAction="http://acme.com/SelectPaymentMethodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPaymentMethod">
+      <soap:operation soapAction="http://acme.com/InsertPaymentMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentMethod">
+      <soap:operation soapAction="http://acme.com/UpdatePaymentMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentMethod">
+      <soap:operation soapAction="http://acme.com/DeletePaymentMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectScannedDocList">
+      <soap:operation soapAction="http://acme.com/SelectScannedDocList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertScannedDoc">
+      <soap:operation soapAction="http://acme.com/InsertScannedDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateScannedDoc">
+      <soap:operation soapAction="http://acme.com/UpdateScannedDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <soap:operation soapAction="http://acme.com/DeleteScannedDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFeesList">
+      <soap:operation soapAction="http://acme.com/SelectFeesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFee">
+      <soap:operation soapAction="http://acme.com/SelectFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFees">
+      <soap:operation soapAction="http://acme.com/InsertFees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFees">
+      <soap:operation soapAction="http://acme.com/UpdateFees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFees">
+      <soap:operation soapAction="http://acme.com/DeleteFees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRejectReason">
+      <soap:operation soapAction="http://acme.com/SelectRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRejectReason">
+      <soap:operation soapAction="http://acme.com/InsertRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectReason">
+      <soap:operation soapAction="http://acme.com/UpdateRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRejectReason">
+      <soap:operation soapAction="http://acme.com/DeleteRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLayoutID">
+      <soap:operation soapAction="http://acme.com/SelectLayoutID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPoliceStation">
+      <soap:operation soapAction="http://acme.com/SelectPoliceStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoliceStation">
+      <soap:operation soapAction="http://acme.com/InsertPoliceStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoliceStation">
+      <soap:operation soapAction="http://acme.com/UpdatePoliceStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoliceStation">
+      <soap:operation soapAction="http://acme.com/DeletePoliceStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranchList">
+      <soap:operation soapAction="http://acme.com/SelectBranchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssRejectReason">
+      <soap:operation soapAction="http://acme.com/SelectIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIssRejectReason">
+      <soap:operation soapAction="http://acme.com/InsertIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssRejectReason">
+      <soap:operation soapAction="http://acme.com/UpdateIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIssRejectReason">
+      <soap:operation soapAction="http://acme.com/DeleteIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLocationList">
+      <soap:operation soapAction="http://acme.com/SelectLocationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLocation">
+      <soap:operation soapAction="http://acme.com/InsertLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLocation">
+      <soap:operation soapAction="http://acme.com/UpdateLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupEntryTypeList">
+      <soap:operation soapAction="http://acme.com/SelectLookupEntryTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEntryType">
+      <soap:operation soapAction="http://acme.com/InsertEntryType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntryType">
+      <soap:operation soapAction="http://acme.com/UpdateEntryType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntryType">
+      <soap:operation soapAction="http://acme.com/DeleteEntryType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupResidentialStatusList">
+      <soap:operation soapAction="http://acme.com/SelectLookupResidentialStatusList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertResidentialStatus">
+      <soap:operation soapAction="http://acme.com/InsertResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentialStatus">
+      <soap:operation soapAction="http://acme.com/UpdateResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentialStatus">
+      <soap:operation soapAction="http://acme.com/DeleteResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVisaClass">
+      <soap:operation soapAction="http://acme.com/SelectVisaClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisaClassList">
+      <soap:operation soapAction="http://acme.com/SelectLookupVisaClassList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisaClass">
+      <soap:operation soapAction="http://acme.com/InsertVisaClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaClass">
+      <soap:operation soapAction="http://acme.com/UpdateVisaClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisaClass">
+      <soap:operation soapAction="http://acme.com/DeleteVisaClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisitPurposeList">
+      <soap:operation soapAction="http://acme.com/SelectLookupVisitPurposeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisitPurpose">
+      <soap:operation soapAction="http://acme.com/InsertVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitPurpose">
+      <soap:operation soapAction="http://acme.com/UpdateVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisitPurpose">
+      <soap:operation soapAction="http://acme.com/DeleteVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectConfigLocation">
+      <soap:operation soapAction="http://acme.com/SelectConfigLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllConfigLocation">
+      <soap:operation soapAction="http://acme.com/SelectAllConfigLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertConfigLocation">
+      <soap:operation soapAction="http://acme.com/InsertConfigLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigLocation">
+      <soap:operation soapAction="http://acme.com/UpdateConfigLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigLocation">
+      <soap:operation soapAction="http://acme.com/DeleteConfigLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPersoMappingList">
+      <soap:operation soapAction="http://acme.com/SelectPersoMappingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersoMapping">
+      <soap:operation soapAction="http://acme.com/InsertPersoMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersoMapping">
+      <soap:operation soapAction="http://acme.com/UpdatePersoMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DALMServiceSoap12" type="tns:DALMServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAppReasonList">
+      <soap12:operation soapAction="http://acme.com/SelectAppReasonList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAppReason">
+      <soap12:operation soapAction="http://acme.com/InsertAppReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppReason">
+      <soap12:operation soapAction="http://acme.com/UpdateAppReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppReason">
+      <soap12:operation soapAction="http://acme.com/DeleteAppReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocTypeList">
+      <soap12:operation soapAction="http://acme.com/SelectDocTypeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocType">
+      <soap12:operation soapAction="http://acme.com/InsertDocType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocType">
+      <soap12:operation soapAction="http://acme.com/UpdateDocType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocType">
+      <soap12:operation soapAction="http://acme.com/DeleteDocType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranch">
+      <soap12:operation soapAction="http://acme.com/SelectBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBranch">
+      <soap12:operation soapAction="http://acme.com/InsertBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap12:operation soapAction="http://acme.com/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <soap12:operation soapAction="http://acme.com/DeleteBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPaymentMethodList">
+      <soap12:operation soapAction="http://acme.com/SelectPaymentMethodList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPaymentMethod">
+      <soap12:operation soapAction="http://acme.com/InsertPaymentMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentMethod">
+      <soap12:operation soapAction="http://acme.com/UpdatePaymentMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentMethod">
+      <soap12:operation soapAction="http://acme.com/DeletePaymentMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectScannedDocList">
+      <soap12:operation soapAction="http://acme.com/SelectScannedDocList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertScannedDoc">
+      <soap12:operation soapAction="http://acme.com/InsertScannedDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateScannedDoc">
+      <soap12:operation soapAction="http://acme.com/UpdateScannedDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScannedDoc">
+      <soap12:operation soapAction="http://acme.com/DeleteScannedDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFeesList">
+      <soap12:operation soapAction="http://acme.com/SelectFeesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFee">
+      <soap12:operation soapAction="http://acme.com/SelectFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFees">
+      <soap12:operation soapAction="http://acme.com/InsertFees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFees">
+      <soap12:operation soapAction="http://acme.com/UpdateFees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFees">
+      <soap12:operation soapAction="http://acme.com/DeleteFees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRejectReason">
+      <soap12:operation soapAction="http://acme.com/SelectRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRejectReason">
+      <soap12:operation soapAction="http://acme.com/InsertRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectReason">
+      <soap12:operation soapAction="http://acme.com/UpdateRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRejectReason">
+      <soap12:operation soapAction="http://acme.com/DeleteRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLayoutID">
+      <soap12:operation soapAction="http://acme.com/SelectLayoutID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPoliceStation">
+      <soap12:operation soapAction="http://acme.com/SelectPoliceStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoliceStation">
+      <soap12:operation soapAction="http://acme.com/InsertPoliceStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoliceStation">
+      <soap12:operation soapAction="http://acme.com/UpdatePoliceStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePoliceStation">
+      <soap12:operation soapAction="http://acme.com/DeletePoliceStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBranchList">
+      <soap12:operation soapAction="http://acme.com/SelectBranchList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssRejectReason">
+      <soap12:operation soapAction="http://acme.com/SelectIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIssRejectReason">
+      <soap12:operation soapAction="http://acme.com/InsertIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssRejectReason">
+      <soap12:operation soapAction="http://acme.com/UpdateIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIssRejectReason">
+      <soap12:operation soapAction="http://acme.com/DeleteIssRejectReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLocationList">
+      <soap12:operation soapAction="http://acme.com/SelectLocationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLocation">
+      <soap12:operation soapAction="http://acme.com/InsertLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLocation">
+      <soap12:operation soapAction="http://acme.com/UpdateLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupEntryTypeList">
+      <soap12:operation soapAction="http://acme.com/SelectLookupEntryTypeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEntryType">
+      <soap12:operation soapAction="http://acme.com/InsertEntryType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntryType">
+      <soap12:operation soapAction="http://acme.com/UpdateEntryType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntryType">
+      <soap12:operation soapAction="http://acme.com/DeleteEntryType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupResidentialStatusList">
+      <soap12:operation soapAction="http://acme.com/SelectLookupResidentialStatusList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertResidentialStatus">
+      <soap12:operation soapAction="http://acme.com/InsertResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentialStatus">
+      <soap12:operation soapAction="http://acme.com/UpdateResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentialStatus">
+      <soap12:operation soapAction="http://acme.com/DeleteResidentialStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVisaClass">
+      <soap12:operation soapAction="http://acme.com/SelectVisaClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisaClassList">
+      <soap12:operation soapAction="http://acme.com/SelectLookupVisaClassList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisaClass">
+      <soap12:operation soapAction="http://acme.com/InsertVisaClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisaClass">
+      <soap12:operation soapAction="http://acme.com/UpdateVisaClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisaClass">
+      <soap12:operation soapAction="http://acme.com/DeleteVisaClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLookupVisitPurposeList">
+      <soap12:operation soapAction="http://acme.com/SelectLookupVisitPurposeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertVisitPurpose">
+      <soap12:operation soapAction="http://acme.com/InsertVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitPurpose">
+      <soap12:operation soapAction="http://acme.com/UpdateVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVisitPurpose">
+      <soap12:operation soapAction="http://acme.com/DeleteVisitPurpose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectConfigLocation">
+      <soap12:operation soapAction="http://acme.com/SelectConfigLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllConfigLocation">
+      <soap12:operation soapAction="http://acme.com/SelectAllConfigLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertConfigLocation">
+      <soap12:operation soapAction="http://acme.com/InsertConfigLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigLocation">
+      <soap12:operation soapAction="http://acme.com/UpdateConfigLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigLocation">
+      <soap12:operation soapAction="http://acme.com/DeleteConfigLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPersoMappingList">
+      <soap12:operation soapAction="http://acme.com/SelectPersoMappingList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersoMapping">
+      <soap12:operation soapAction="http://acme.com/InsertPersoMapping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersoMapping">
+      <soap12:operation soapAction="http://acme.com/UpdatePersoMapping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DALMService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+    <wsdl:port name="DALMServiceSoap" binding="tns:DALMServiceSoap">
+      <soap:address location="http://localhost/DocumentAndLookupManagement/DALMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DALMServiceSoap12" binding="tns:DALMServiceSoap12">
+      <soap12:address location="http://localhost/DocumentAndLookupManagement/DALMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

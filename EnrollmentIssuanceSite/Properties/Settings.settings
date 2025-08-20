@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnrollmentIssuanceSite.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EnrollmentIssuanceSite_AccessManagementWS_AMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/AccessManagement/AMService.asmx</Value>
+    </Setting>
+    <Setting Name="EnrollmentIssuanceSite_DALMWS_DALMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/DocumentAndLookupManagement/DALMService.asmx</Value>
+    </Setting>
+    <Setting Name="EnrollmentIssuanceSite_IdentityManagementWS_IMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/IdentityManagement/IMService.asmx</Value>
+    </Setting>
+    <Setting Name="EnrollmentIssuanceSite_EnrollManagementWS_EMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/EnrollManagement/EMService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

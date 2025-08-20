@@ -1,0 +1,49 @@
+﻿.Footer
+{
+    background-color:#5D7B9D;
+    color:White;
+    font-family:"Arial";
+    font-weight:bold;
+      
+}
+.Row
+{
+    background-color:#F7F6F3;
+    color:#333333;
+    font-size:small;
+    font-family:Arial;
+}
+
+.SelectedRow
+{
+     background-color:#E2DED6;
+     color:#333333;
+     border:solid 1px #8080FF;
+     font-weight:bold;
+     font-size:small;
+}
+.Pager
+{
+    background-color:#284775;
+    color:White;
+    text-align:center;
+    font-size:11px;
+    font-family:Arial;
+                                   
+}
+.Header
+{
+    background-color:#5D7B9D;
+    width:50px;
+    color:White;
+    text-align:left;
+    font-size:small;
+    font-family:Arial;
+    font-weight:bold;
+}
+.Alternate
+{
+    background-color:White;
+    color:#284775;
+    font-size:small;
+}

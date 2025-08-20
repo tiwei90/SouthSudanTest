@@ -1,0 +1,142 @@
+
+.parentHeaderMouseOver
+{ 
+	font:bold 8pt Tahoma;
+    color:#2e6f8b;
+    text-align:left;
+    vertical-align:middle;
+	padding: 2px;
+	height: 33px;
+    padding-left: 12px;
+}
+.homeHeaderMouseOver
+{ 
+	font:bold 8pt Tahoma;
+    color:#006896;
+    text-align:left;
+    vertical-align:middle;
+	padding: 2px;
+	height: 33px;
+    padding-left: 2px;
+}
+.parentHeaderMouseOut
+{ 
+	font: bold 8pt Tahoma;
+	color: #606060;
+	text-align: left;
+	padding: 2px;
+	padding-left: 10px;
+	height: 33px;
+	text-decoration: none;
+	vertical-align:middle;
+}
+.homeHeaderMouseOut
+{ 
+	font: bold 8pt Tahoma;
+	color: #606060;
+	text-align: left;
+	padding: 2px;
+	padding-left: 0px;
+	height: 33px;
+	text-decoration: none;
+	vertical-align:middle;
+}
+.hiddenPanel
+{
+	visibility:hidden;
+	height:1px;
+}
+
+.showPanel
+{
+	visibility:visible;
+}
+
+.PanelMenu {
+	background-color:white;
+	border:1px solid #DADBDB;
+	border-top:yes;
+	width: 150px;
+	VERTICAL-ALIGN: top;
+}
+
+.PanelEnrolMenu {
+	background-color:white;
+	border:1px solid #DADBDB;
+	border-top:yes;
+	width: 150px;
+}
+.SideMenuP2
+{
+	top: 332px;
+	position: absolute;
+	left: 5px;
+}
+
+.SideMenuP1
+{
+	position: absolute;
+	left: 5px;
+	top: 175px;
+}
+
+.HeaderPanel
+{
+	font: bold 8pt Tahoma;
+	color: #606060;
+	text-align: left;
+	padding: 2px;
+	padding-left: 12px;
+	height: 33px;
+	text-decoration: none;
+	vertical-align:middle;
+}
+.HeaderTitle
+{
+	font: bold 8pt Tahoma;
+	color: #006896;
+	text-align: left;
+	height: 25px;
+	text-decoration: none;
+}
+.HomePanel
+{
+	font: bold 8pt Tahoma;
+	color: #606060;
+	text-align: left;
+	padding: 2px;
+	padding-left: 12px;
+	height: 21px;
+	text-decoration: none;
+}
+.SelectedUrl
+{
+	font: bold 8pt Arial;
+}
+
+.tdImgArrowHidden
+{
+    height:25px;
+	width:8px;
+	padding-left:2px;
+	visibility:hidden;
+}
+
+.tdImgArrowShow
+{
+    height:25px;
+	width:8px;
+	padding-left:4px;
+	visibility:visible;
+}
+.BottomLine
+{
+	height:20px;
+	border-bottom:solid 1px silver;
+}
+.headerLoginInfo
+{
+    position: absolute;
+	left: 5px;
+	top: 140px; 
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://acme.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://acme.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://acme.com/">
+      <s:element name="IdentityManagementRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s_XMLString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentityManagementRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentityManagementRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IdentityManagementRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:IdentityManagementRequest" />
+  </wsdl:message>
+  <wsdl:message name="IdentityManagementRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:IdentityManagementRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMServiceSoap">
+    <wsdl:operation name="IdentityManagementRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Identity Management Webservice request digester.</wsdl:documentation>
+      <wsdl:input message="tns:IdentityManagementRequestSoapIn" />
+      <wsdl:output message="tns:IdentityManagementRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IMServiceSoap" type="tns:IMServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentityManagementRequest">
+      <soap:operation soapAction="http://acme.com/IdentityManagementRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IMServiceSoap12" type="tns:IMServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentityManagementRequest">
+      <soap12:operation soapAction="http://acme.com/IdentityManagementRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IMService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ACME Company. (M) Web Services . Copyright 2016</wsdl:documentation>
+    <wsdl:port name="IMServiceSoap" binding="tns:IMServiceSoap">
+      <soap:address location="http://localhost/IdentityManagement/IMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IMServiceSoap12" binding="tns:IMServiceSoap12">
+      <soap12:address location="http://localhost/IdentityManagement/IMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

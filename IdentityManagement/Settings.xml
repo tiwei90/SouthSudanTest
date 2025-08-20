@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+	<DataSource>
+		<ConnectionString value="Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;pwd=admin@123;Initial Catalog=VIS;Data Source=127.0.0.1;"/>
+	</DataSource>
+	<WebConfig>
+		<SCHEMAPATH value="SchemaFiles\"/>
+		<HANDLERSPATH value="handler\"/>
+		<DATAPATH value="datapath\"/>
+		<TEMPPATH value="temp\"/>
+		<LOGPATH value="logs/"/>
+		<XMLPATH value="Traces/"/>
+	</WebConfig>
+	<MessageHandlers>
+		<Type name="13.53.7" module="IdentityManagement.ObjectHandler.Organization" function="SelectAll"/>
+		<Type name="13.54.1" module="IdentityManagement.ObjectHandler.OrganizationalUnit" function="Insert"/>
+		<Type name="13.54.2" module="IdentityManagement.ObjectHandler.OrganizationalUnit" function="Select"/>
+		<Type name="13.54.3" module="IdentityManagement.ObjectHandler.OrganizationalUnit" function="Update"/>
+		<Type name="13.54.7" module="IdentityManagement.ObjectHandler.OrganizationalUnit" function="SelectAll"/>
+		<Type name="13.63.1" module="IdentityManagement.ObjectHandler.User" function="Insert"/>
+		<Type name="13.63.2" module="IdentityManagement.ObjectHandler.User" function="Select"/>
+		<Type name="13.63.3" module="IdentityManagement.ObjectHandler.User" function="Update"/>
+		<Type name="13.63.4" module="IdentityManagement.ObjectHandler.User" function="SelectAll"/>
+		<Type name="13.63.5" module="IdentityManagement.ObjectHandler.User" function="UpdateChallenge"/>
+		<Type name="13.63.6" module="IdentityManagement.ObjectHandler.User" function="SelectChallenge"/>
+		<Type name="13.63.7" module="IdentityManagement.ObjectHandler.User" function="ChangePassword"/>
+		<Type name="13.63.8" module="IdentityManagement.ObjectHandler.User" function="DisableEnable"/>	
+	  <Type name="13.63.9" module="IdentityManagement.ObjectHandler.User" function="Login"/>		
+	  <Type name="13.63.10" module="IdentityManagement.ObjectHandler.User" function="ResetPassword"/>
+	  <Type name="18.1.1" module="IdentityManagement.ObjectHandler.Shared" function="InsertAddress"/>
+	  <Type name="18.1.2" module="IdentityManagement.ObjectHandler.Shared" function="SelectAddress"/>
+	  <Type name="18.1.3" module="IdentityManagement.ObjectHandler.Shared" function="UpdateAddress"/>
+	  <Type name="18.1.7" module="IdentityManagement.ObjectHandler.Shared" function="SelectAllAddress"/>
+	  <Type name="18.19.1" module="IdentityManagement.ObjectHandler.Shared" function="InsertCountry"/>
+	  <Type name="18.19.2" module="IdentityManagement.ObjectHandler.Shared" function="SelectCountry"/>
+	  <Type name="18.19.3" module="IdentityManagement.ObjectHandler.Shared" function="UpdateCountry"/>
+		<Type name="18.19.7" module="IdentityManagement.ObjectHandler.Shared" function="SelectAllCountry"/>
+		<Type name="18.58.1" module="IdentityManagement.ObjectHandler.Shared" function="InsertPostalCodeLocality"/>
+	  <Type name="18.58.2" module="IdentityManagement.ObjectHandler.Shared" function="SelectPostalCodeLocality"/>
+	  <Type name="18.58.3" module="IdentityManagement.ObjectHandler.Shared" function="UpdatePostalCodeLocality"/>
+		<Type name="18.58.7" module="IdentityManagement.ObjectHandler.Shared" function="SelectAllPostalCodeLocality"/>
+		<Type name="18.61.1" module="IdentityManagement.ObjectHandler.Shared" function="InsertStateOrProvince"/>
+	  <Type name="18.61.2" module="IdentityManagement.ObjectHandler.Shared" function="SelectStateOrProvince"/>
+	  <Type name="18.61.3" module="IdentityManagement.ObjectHandler.Shared" function="UpdateStateOrProvince"/>
+		<Type name="18.61.7" module="IdentityManagement.ObjectHandler.Shared" function="SelectAllStateOrProvince"/>		
+	</MessageHandlers>
+</Settings>

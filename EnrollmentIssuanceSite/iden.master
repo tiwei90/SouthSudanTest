@@ -1,0 +1,27 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="EnrollmentIssuanceSite.iden" Codebehind="iden.master.cs" %>
+<%@ Register Src="usercontrol/sidemenu.ascx" TagName="sidemenu" TagPrefix="uc2" %>
+<%@ Register Src="usercontrol/header.ascx" TagName="header" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Enrollment and Issuance System</title>
+        <link href="inc/main.css" rel="stylesheet" type="text/css" />   
+        <link href="inc/menuitem.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    <uc1:header ID="Header1" runat="server" />
+                    <uc2:sidemenu ID="Sidemenu1" runat="server" />
+                </asp:contentplaceholder>
+                <div class="PanelBorder">
+                    <asp:contentplaceholder id="Content" runat="server">
+                    </asp:contentplaceholder>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
