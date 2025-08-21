@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessManagement", "AccessM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrollmentIssuanceSite", "EnrollmentIssuanceSite\EnrollmentIssuanceSite.csproj", "{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationSite", "..\..\Users\ooakadmin\Documents\base-visa-solution-master\AuthenticationSite\AuthenticationSite.csproj", "{C894EE5B-8FCB-4775-8C51-F9403B37CC21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C894EE5B-8FCB-4775-8C51-F9403B37CC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C894EE5B-8FCB-4775-8C51-F9403B37CC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C894EE5B-8FCB-4775-8C51-F9403B37CC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C894EE5B-8FCB-4775-8C51-F9403B37CC21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{67F324E4-6CE3-4ACB-A9E8-7812BBF77BD7} = {BA1BCA3D-DC23-4961-9D08-611F33A641EA}
 		{AC8F1406-6B3E-4E6A-8163-540EB16F9251} = {D09E1583-9CCA-4238-A22C-C653B0514A6B}
 		{26CEAC1B-62C2-4DA5-AE89-B5F7F7CBF32C} = {BA1BCA3D-DC23-4961-9D08-611F33A641EA}
+		{C894EE5B-8FCB-4775-8C51-F9403B37CC21} = {D09E1583-9CCA-4238-A22C-C653B0514A6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56114D30-982E-4B8C-B70F-511D964E3077}
